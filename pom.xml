@@ -108,7 +108,6 @@
 		
     </dependencies>
 
-    <properties>
 
     <build>
         <plugins>
@@ -124,11 +123,6 @@
             <id>spring-releases</id>
             <url>https://repo.spring.io/libs-release</url>
         </repository>
-          <repository>
-    <id>sonatype</id>
-    <name>Sonatype OSS Snapshots Repository</name>
-    <url>http://oss.sonatype.org/content/groups/public</url>
-  </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
