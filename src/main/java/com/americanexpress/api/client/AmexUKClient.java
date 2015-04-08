@@ -1,5 +1,5 @@
-package com.americanexpress.api.client
-;
+package com.americanexpress.api.client;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Level;
 
-import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
+//import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
