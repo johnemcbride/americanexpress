@@ -4,3 +4,4 @@ src/main/java/com/americanexpress/tests/AmexUKClientTest.java
 .classpath
 bin/*
 target/*
+/target/

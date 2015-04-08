@@ -8,11 +8,17 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.2.2.RELEASE</version>
 	</parent>
+	
+	  
+	<distributionManagement>
+    <repository>
+      <id>sarxos-ftp-repo</id>
+      <url>dav:http://cityhome.noip.me/webdav/wordpress</url>
+        <releases><enabled>true</enabled></releases>
+    <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+  </distributionManagement>
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
@@ -59,6 +65,14 @@
 		</dependency>
 	</dependencies>
 	<build>
+	
+	  <extensions>
+    <extension>
+            <groupId>org.apache.maven.wagon</groupId>
+            <artifactId>wagon-webdav</artifactId>
+            <version>1.0-beta-2</version>
+         </extension>
+         </extensions>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
