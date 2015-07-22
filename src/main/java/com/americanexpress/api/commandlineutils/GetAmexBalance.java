@@ -8,8 +8,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 
-import com.americanexpress.api.client.AmexUKClient;
-
 public class GetAmexBalance {
 
 	public static void main(String[] args) {
@@ -20,12 +18,13 @@ public class GetAmexBalance {
 	 	java.util.logging.Logger.getLogger("log4j.logger.httpclient.wire;").setLevel(Level.OFF);
 	 	java.util.logging.Logger.getLogger("org.springframework.http.converter.json.MappingJackson2HttpMessageConverter").setLevel(Level.OFF);
 	
-	 	BigDecimal balance = new AmexUKClient(args[0], args[1])	.getLoginResp()
-				.getSummaryData()
+	 	BigDecimal balance = com.americanexpress.screenscraping.client.AmexUKClient.fetchBalance(args[0], args[1]);
+	 			//(args[0], args[1])	.getLoginResp()
+				/*.getSummaryData()
 				.getCardList()[Integer.parseInt(args[2])]	
 				.getSummary()	
 				.getTotalBalance()
-				.getMathematicalValue();
+				.getMathematicalValue();*/
 	 	
 	 	PrintWriter writer;
 
